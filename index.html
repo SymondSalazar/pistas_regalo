@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pistotaaas</title>
+    <style>
+      body {
+        font-family:
+          "Courier New", Courier, monospace; /* Fuente tipo máquina de escribir */
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: #000000;
+      }
+
+      .container {
+        border: 2px solid #000000;
+        padding: 2.5rem;
+        max-width: 550px;
+        width: 90%;
+        background-color: #ffffff;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid #000000;
+        padding-bottom: 10px;
+      }
+
+      ol {
+        padding-left: 25px;
+      }
+
+      li {
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      /* Censura en Negro Puro */
+      .spoiler {
+        background-color: #000000;
+        color: #000000; /* Texto del mismo color que el fondo */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 0 4px;
+        user-select: none;
+        display: inline;
+      }
+
+      /* Ocultar el link totalmente */
+      .spoiler a {
+        color: #000000;
+        pointer-events: none;
+        text-decoration: none;
+      }
+
+      /* Al revelar (Fondo blanco, texto negro) */
+      .revealed {
+        background-color: transparent !important;
+        color: #000000 !important;
+        cursor: default;
+        user-select: text;
+      }
+
+      /* El único elemento con color: el link */
+      .revealed a {
+        color: #0000ff; /* Azul clásico de link para que resalte */
+        pointer-events: auto;
+        text-decoration: underline;
+      }
+
+      .footer {
+        margin-top: 30px;
+        font-size: 0.75rem;
+        text-align: center;
+        border-top: 1px dashed #000000;
+        padding-top: 15px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pistas ultra mega secretas</h1>
+
+      <ol>
+        <li>
+          <span class="spoiler" onclick="reveal(this)">
+            Es una fecha (DD-MM-AAAA) -> el formato es muy importante.
+          </span>
+        </li>
+        <li>
+          <span class="spoiler" onclick="reveal(this)">
+            Si el día deseas encontrar, en los
+            <a
+              href="https://symondsalazar.github.io/NicolesGift/"
+              target="_blank"
+              >cupones</a
+            >
+            deberás buscar.
+          </span>
+        </li>
+        <li>
+          <span class="spoiler" onclick="reveal(this)">
+            El mes es sencillo: es la cantidad de bits que contiene un byte.
+          </span>
+        </li>
+        <li>
+          <span class="spoiler" onclick="reveal(this)">
+            Probablemente el año ya lo sepas, pero si no es así, es el año
+            pasado.
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      function reveal(element) {
+        element.classList.add("revealed");
+      }
+    </script>
+  </body>
+</html>
