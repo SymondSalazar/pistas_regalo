@@ -6,23 +6,22 @@
     <title>Pistotaaas</title>
     <style>
       body {
-        font-family:
-          "Courier New", Courier, monospace; /* Fuente tipo máquina de escribir */
-        background-color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        background-color: #000000; /* Antes blanco */
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        color: #000000;
+        color: #ffffff; /* Antes negro */
       }
 
       .container {
-        border: 2px solid #000000;
+        border: 2px solid #ffffff; /* Antes negro */
         padding: 2.5rem;
         max-width: 550px;
         width: 90%;
-        background-color: #ffffff;
+        background-color: #000000; /* Antes blanco */
       }
 
       h1 {
@@ -31,7 +30,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: 2rem;
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #ffffff; /* Antes negro */
         padding-bottom: 10px;
       }
 
@@ -45,10 +44,10 @@
         font-weight: bold;
       }
 
-      /* Censura en Negro Puro */
+      /* Censura en Blanco Puro */
       .spoiler {
-        background-color: #000000;
-        color: #000000; /* Texto del mismo color que el fondo */
+        background-color: #ffffff; /* Antes negro */
+        color: #ffffff; /* Texto del mismo color que el fondo */
         cursor: pointer;
         transition: background-color 0.3s ease;
         padding: 0 4px;
@@ -58,22 +57,22 @@
 
       /* Ocultar el link totalmente */
       .spoiler a {
-        color: #000000;
+        color: #ffffff;
         pointer-events: none;
         text-decoration: none;
       }
 
-      /* Al revelar (Fondo blanco, texto negro) */
+      /* Al revelar (Fondo negro, texto blanco) */
       .revealed {
         background-color: transparent !important;
-        color: #000000 !important;
+        color: #ffffff !important;
         cursor: default;
         user-select: text;
       }
 
       /* El único elemento con color: el link */
       .revealed a {
-        color: #0000ff; /* Azul clásico de link para que resalte */
+        color: #00ffff; /* Cian brillante para que resalte en negro */
         pointer-events: auto;
         text-decoration: underline;
       }
@@ -82,7 +81,7 @@
         margin-top: 30px;
         font-size: 0.75rem;
         text-align: center;
-        border-top: 1px dashed #000000;
+        border-top: 1px dashed #ffffff;
         padding-top: 15px;
         text-transform: uppercase;
       }
